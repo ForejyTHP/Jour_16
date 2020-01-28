@@ -56,6 +56,7 @@ class Game
         if enemy.life_points > 0
           survivors_ary.push(enemy)
         end
+        sleep(1)
       end
       @enemies_in_sight = survivors_ary
     elsif enemies_in_sight.size > 0 #Le joueur principal attaque les autres joueurs
@@ -66,7 +67,6 @@ class Game
         human_player.attacks(temp_enemy)
         if temp_enemy.life_points <= 0
           kill_player(temp_enemy)
-          p "it's done"
         end
        end
     end

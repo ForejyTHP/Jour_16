@@ -17,9 +17,9 @@ def perform
   game = Game.new(gets.chomp)
   while (game.is_still_ongoing?)
     game.show_players
-    # sleep(1)
+    sleep(1)
     game.new_players_in_sight
-    # sleep(2)
+    sleep(2)
     game.menu
     choice = gets.chomp#TODO: Tester directement dans les parentheses
     while (choice !~ /[asZ01]/) #Si le choix est incorrect, continue de demander
